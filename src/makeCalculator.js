@@ -5,7 +5,7 @@
  */
 
 function makeCalculator() {
-  const mathOperate = {
+  const calculator = {
     result: 0,
     operate(mathMethods, number) {
       mathMethods.call(this, number);
@@ -27,19 +27,19 @@ function makeCalculator() {
 
       return this;
     },
-    multiply(value, result) {
+    multiply(value) {
       this.result *= value;
 
       return this;
     },
-    divide(value, result) {
+    divide(value) {
       this.result /= value;
 
       return this;
     },
   };
 
-  return mathOperate;
+  return calculator;
 }
 
 const calculator = makeCalculator();
